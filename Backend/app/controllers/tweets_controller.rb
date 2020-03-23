@@ -3,14 +3,22 @@ class TweetsController < ApplicationController
     def index 
         start_date = params[:start]
         end_date = params[:end]
-        hashtag = params[:hashtag]
-        tweets1 = Tweet.all.select do |tweet|
-            tweet.hashtag == hashtag
+        hashtag1 = params[:hashtag1]
+        hashtag2 = params[:hashtag2]
+        tweetsa1 = Tweet.all.select do |tweet|
+            tweet.hashtag == hashtag1
         end
-        tweets2 = tweets1.select do |tweet|
+        tweetsa2 = tweetsa1.select do |tweet|
             start_date.to_i <= tweet.date.to_i && tweet.date.to_i <= end_date.to_i
         end 
-        render json: tweets2
+        tweetsb1 = Tweet.all.select do |tweet|
+            tweet.hashtag == hashtag2
+        end
+        tweetsb2 = tweetsb1.select do |tweet|
+            start_date.to_i <= tweet.date.to_i && tweet.date.to_i <= end_date.to_i
+        end 
+        results = [tweetsa2, tweetsb2]
+        render json: results
     end 
 
     def show 

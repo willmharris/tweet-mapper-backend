@@ -16,18 +16,22 @@ def random_date
 end 
 
 def random_hashtag
-    x = rand(1..3)
+    x = rand(1..5)
     if x == 1 
         x = "hashtag1"
     elsif x == 2 
         x = "hashtag2"
-    else
+    elsif x == 3
         x = "hashtag3"
+    elsif x == 4
+        x = "hashtag4"
+    else 
+        x = "hashtag5"
     end 
     return x 
 end 
 
-10000.times do 
+1000.times do 
     Tweet.create(date: random_date, hashtag: random_hashtag)
 end 
 
