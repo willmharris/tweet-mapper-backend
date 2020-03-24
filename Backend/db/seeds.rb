@@ -35,3 +35,10 @@ end
     Tweet.create(date: random_date, hashtag: random_hashtag)
 end 
 
+User.create(name: "Will")
+User.create(name: "Laura")
+
+Search.create(user_id: 1, hashtags: "hashtag1 hashtag2")
+Search.create(user_id: 1,  hashtags: "hashtag2 hashtag3")
+Search.create(user_id: 2,  hashtags: "hashtag4 hashtag5")
+
