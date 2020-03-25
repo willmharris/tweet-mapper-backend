@@ -38,7 +38,7 @@ end
 User.create(name: "Will")
 User.create(name: "Laura")
 
-Search.create(user_id: 1, hashtags: "hashtag1 hashtag2")
-Search.create(user_id: 1,  hashtags: "hashtag2 hashtag3")
-Search.create(user_id: 2,  hashtags: "hashtag4 hashtag5")
+Search.create(user_id: 1, hashtags: "hashtag1 hashtag2", start_date: "2010", end_date: "2020")
+Search.create(user_id: 1,  hashtags: "hashtag2 hashtag3", start_date: "2013", end_date: "2018")
+Search.create(user_id: 2,  hashtags: "hashtag4 hashtag5", start_date: "2010", end_date: "2020")
 

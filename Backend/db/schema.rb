@@ -10,13 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_21_161335) do
+ActiveRecord::Schema.define(version: 2020_03_25_203744) do
 
   create_table "searches", force: :cascade do |t|
     t.integer "user_id", null: false
     t.string "hashtags"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "start_date"
+    t.string "end_date"
     t.index ["user_id"], name: "index_searches_on_user_id"
   end
 
