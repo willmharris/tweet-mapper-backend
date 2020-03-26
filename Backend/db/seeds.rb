@@ -18,20 +18,20 @@ end
 def random_hashtag
     x = rand(1..5)
     if x == 1 
-        x = "hashtag1"
+        x = "MerylStreep"
     elsif x == 2 
-        x = "hashtag2"
+        x = "AmyAdams"
     elsif x == 3
-        x = "hashtag3"
+        x = "CateBlanchett"
     elsif x == 4
-        x = "hashtag4"
+        x = "BrieLarson"
     else 
-        x = "hashtag5"
+        x = "EmmaStone"
     end 
     return x 
 end 
 
-1000.times do 
+10000.times do 
     Tweet.create(date: random_date, hashtag: random_hashtag)
 end 
 
@@ -39,6 +39,6 @@ User.create(name: "Will")
 User.create(name: "Laura")
 
 Search.create(user_id: 1, hashtags: "hashtag1 hashtag2", start_date: "2010", end_date: "2020")
-Search.create(user_id: 1,  hashtags: "hashtag2 hashtag3", start_date: "2013", end_date: "2018")
+Search.create(user_id: 1,  hashtags: "hashtag2 hashtag3", start_date: "2012", end_date: "2013")
 Search.create(user_id: 2,  hashtags: "hashtag4 hashtag5", start_date: "2010", end_date: "2020")
 
