@@ -31,7 +31,7 @@ def random_hashtag
     return x 
 end 
 
-10000.times do 
+1000.times do 
     Tweet.create(date: random_date, hashtag: random_hashtag)
 end 
 
